@@ -1,3 +1,4 @@
+/*
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { formatPromoDate } from '../../../utils/promoDate'
@@ -50,7 +51,7 @@ export function PostDetailPage() {
   const handleApplySubmit = async () => {
     try {
       await instance.post('/promotion-applies', {
-        /* request body 확인 부탁하기*/
+        /* request body 확인 부탁하기*/ /*
         promotionId,
       })
       setShowConsentModal(false)
@@ -69,6 +70,53 @@ export function PostDetailPage() {
 
   if (isLoading) return <div>로딩 중...</div>
   if (isError || !post) return <div>게시물을 찾을 수 없습니다.</div>
+  */
+
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { formatPromoDate } from '../../../utils/promoDate'
+import { ConsentModal } from '../components/ConsentModal'
+import { CompletionModal } from '../components/CompletionModal'
+import './PostDetailPage.css'
+import { Icon } from '../../../components/Icon/Icon'
+import { Button } from '../../../components/Button/Button'
+
+// 카테고리 변환 매핑
+const categoryMap = {
+  CAFE: '카페',
+  RESTAURANT: '식당',
+  OTHER: '기타',
+}
+
+export function PostDetailPage() {
+  const navigate = useNavigate()
+  const [showConsentModal, setShowConsentModal] = useState(false)
+  const [showCompletionModal, setShowCompletionModal] = useState(false)
+
+  const [userRole, setUserRole] = useState(null)
+
+  useEffect(() => {
+    setUserRole('ROLE_MATE')
+  }, [])
+
+  const post = {
+    thumbnail: 'https://placehold.co/600x400',
+    category: '식당',
+    address: '서울시 강남구 어딘가',
+    nickname: '상호명1',
+    phone: '010-4444-4444',
+    context: '신선한 원두와 부드러운 라떼 맛보기 프로모션',
+    createdAt: '08/13',
+    start_date: '2025-08-20',
+    end_date: '2025-08-31',
+  }
+
+  const handleApplyClick = () => setShowConsentModal(true)
+
+  const handleCloseCompletionModal = () => {
+    setShowCompletionModal(false)
+    navigate('/home/student')
+  }
 
   return (
     <div className='post-detail-container'>
@@ -133,9 +181,7 @@ export function PostDetailPage() {
         </div>
       )}
 
-      {showConsentModal && (
-        <ConsentModal onClose={() => setShowConsentModal(false)} onApply={handleApplySubmit} />
-      )}
+      {showConsentModal && <ConsentModal onClose={() => setShowConsentModal(false)} />}
 
       {showCompletionModal && <CompletionModal onClose={handleCloseCompletionModal} />}
     </div>
