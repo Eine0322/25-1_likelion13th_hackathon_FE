@@ -1,3 +1,16 @@
+<div align="center">
+
+<!-- logo -->
+<img width="350" height="89" alt="Group 1363 1" src="https://github.com/user-attachments/assets/ae7f2390-a530-4cda-8ddd-b2b36b88b14d" />
+
+
+
+### Web: 세대 연결형 SNS 프로모션 플랫폼 FeedUp
+
+<br/> [<img src="https://img.shields.io/badge/프로젝트 기간-2025.07.26~2025.08.26-blue?style=flat&logo=&logoColor=white" />]()
+
+</div> 
+
 ## 📍 프로젝트 개요
 
 ---
@@ -20,6 +33,7 @@ FeedUp은 **리뷰 기반 프로모션** 구조를 통해
 
 대학생에게는 **리뷰 작성을 통한 합리적인 한 끼 경험**을 제공합니다.
 
+<br/>
 ## 📍 주요 기능
 
 ---
@@ -36,6 +50,20 @@ FeedUp은 **리뷰 기반 프로모션** 구조를 통해
 - 진행 중인 프로모션 조회 및 참여 신청
 - 프로모션 참여 후 리뷰 작성
 - 리뷰 승인 및 조건 충족 시 **10,000원 페이백** 지급
+
+<br/>
+
+## 📍 사용 스택
+**ROLE : Frontend**
+<div>
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+  <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"/>
+    <img src="https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white"/>
+  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+</div>
+
+<br/>
 
 ## 📍 상세 페이지
 
